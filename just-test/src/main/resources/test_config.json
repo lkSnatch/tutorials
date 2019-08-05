@@ -1,0 +1,11 @@
+{
+  "service" : {
+    "name" : "service",
+    "id" : "test",
+    "name_id" : "service_test"
+  },
+  "options" : {
+    "number" : 1,
+    "string" : "smth"
+  }
+}
