@@ -4,10 +4,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>net.snatchTech.winService</groupId>
-  <artifactId>win-service</artifactId>
+  <groupId>net.snatchTech.osService</groupId>
+  <artifactId>os-service</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>win-service</name>
+  <name>os-service</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

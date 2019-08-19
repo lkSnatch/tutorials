@@ -1,4 +1,4 @@
-package net.snatchTech.winService;
+package net.snatchTech.osService;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

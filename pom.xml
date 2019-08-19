@@ -136,7 +136,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>resources/</classpathPrefix>
                             <mainClass>
-                                net.snatchTech.winService.App
+                                net.snatchTech.osService.App
                             </mainClass>
                         </manifest>
                         <manifestEntries>

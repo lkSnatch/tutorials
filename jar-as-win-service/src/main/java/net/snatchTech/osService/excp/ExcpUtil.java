@@ -4,7 +4,7 @@
  * Copyright (c) 2019. All rights reserved.
  */
 
-package net.snatchTech.winService.excp;
+package net.snatchTech.osService.excp;
 
 /**
  * Util class for work with exceptions

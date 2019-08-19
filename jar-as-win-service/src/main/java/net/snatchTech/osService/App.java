@@ -1,8 +1,8 @@
-package net.snatchTech.winService;
+package net.snatchTech.osService;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import net.snatchTech.winService.excp.ExcpUtil;
+import net.snatchTech.osService.excp.ExcpUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
