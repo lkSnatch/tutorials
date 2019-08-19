@@ -13,7 +13,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 /**
- * Hello world!
+ * Hello services!
  *
  */
 public class App {
@@ -32,6 +32,7 @@ public class App {
 
         String appName = args[0];
         String taskName = args[1];
+        int repeats = args.length > 2 ? Integer.valueOf(args[2]) : -1;
 
         try (InputStream isProps = App.class.getResourceAsStream("/" + taskName + "_logging.properties")){
             LogManager.getLogManager().readConfiguration(isProps);
@@ -58,7 +59,11 @@ public class App {
 
         new Thread(() -> {
 
-            while (true) {
+            int repeats_lambda = repeats;
+            while (repeats_lambda != 0) {
+
+                repeats_lambda--;
+
                 StringBuilder sb = new StringBuilder();
 
                 properties.forEach((prop_group, prop) -> {
@@ -75,7 +80,10 @@ public class App {
                 } catch (InterruptedException e) {
                     log.log(Level.SEVERE, "Interrupted exception!!", e);
                 }
+
             }
+
+            throw new RuntimeException("stop working! need a rest..");
 
         }).start();
 
