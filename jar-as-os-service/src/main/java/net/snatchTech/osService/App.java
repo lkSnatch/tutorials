@@ -6,8 +6,12 @@ import net.snatchTech.osService.excp.ExcpUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.management.ThreadInfo;
+import java.lang.management.ThreadMXBean;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -23,6 +27,8 @@ public class App {
     private static Map<String, Map<String, String>> properties = new HashMap<>();
 
     public static void main( String[] args ) {
+
+        Thread.currentThread().setName("main thread");
 
         if (args.length == 0){
             throw new IllegalArgumentException("There is no arguments have been passed to the program.");
@@ -53,11 +59,12 @@ public class App {
         }
 
         Thread.setDefaultUncaughtExceptionHandler((t, e) ->
-                log.log(Level.SEVERE, "Uncaught exception in thread: " + t.getName() +
-                        ", due to: " + ExcpUtil.getFullDescription(e), e)
+            log.log(Level.SEVERE, "Uncaught exception in thread: " + t.getName() +
+                    ", due to: " + ExcpUtil.getFullDescription(e), e)
         );
 
         new Thread(() -> {
+            Thread.currentThread().setName("repeat thread");
 
             int repeats_lambda = repeats;
             while (repeats_lambda != 0) {
@@ -83,9 +90,11 @@ public class App {
 
             }
 
-            throw new RuntimeException("stop working! need a rest..");
-
+            throw new RuntimeException(Thread.currentThread().getName() + " stop working! need a rest..");
         }).start();
 
+        //throw new RuntimeException(Thread.currentThread().getName() + " stop working! need a rest..");
+
     }
+
 }
