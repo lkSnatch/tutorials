@@ -6,12 +6,8 @@ import net.snatchTech.osService.excp.ExcpUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -75,9 +71,9 @@ public class App {
 
                 properties.forEach((prop_group, prop) -> {
                     sb.append("\n").append(prop_group);
-                    prop.forEach((name, value) -> {
-                        sb.append("\n").append(name).append(" : ").append(value);
-                    });
+                    prop.forEach((name, value) ->
+                        sb.append("\n").append(name).append(" : ").append(value)
+                    );
                 });
 
                 log.info(sb.toString());
