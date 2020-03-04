@@ -11,7 +11,7 @@
 	<artifactId>cacheSimple</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cacheSimple</name>
-	<url>https://github.com/lkSnatch/tutorials</url>
+	<url>https://github.com/lkSnatch/tutorials/tree/master/cacheSimple</url>
 	<description>system design: cache</description>
 
 	<properties>
