@@ -11,6 +11,7 @@
         <module>data-structures</module>
         <module>tiny-url</module>
         <module>consistent-hashing</module>
+        <module>assertSerialize</module>
     </modules>
     <name>main-tutorial</name>
     <packaging>pom</packaging>
