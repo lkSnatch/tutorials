@@ -12,6 +12,7 @@
         <module>tiny-url</module>
         <module>consistent-hashing</module>
         <module>assertSerialize</module>
+        <module>algorithms</module>
     </modules>
     <name>main-tutorial</name>
     <packaging>pom</packaging>
@@ -20,6 +21,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
 </project>
